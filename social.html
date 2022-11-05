@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="description" content="Links to all my social media profiles.">
   </head>
+  <style>
+    .add-link::after { content: attr(href); }
+  </style>
   <body>
     <ol>
-      <li><a href="hachyderm.io/web/@evntdrvn"/></li>
-      <li><a href="cohost.org/evntdrvn"/></li>
-      <li><a href="twitter.com/evntdrvn"/></li>
+      <li><a class="add-link" href="hachyderm.io/web/@evntdrvn"/></li>
+      <li><a class="add-link" href="cohost.org/evntdrvn"/></li>
+      <li><a class="add-link" href="twitter.com/evntdrvn"/></li>
 </ol>
   </body>
 </html>
