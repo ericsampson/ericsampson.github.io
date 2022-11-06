@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Social media profiles</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Links to all my social media profiles.">
+
+<head>
+  <title>Social media profiles</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Links to all my social media profiles.">
   <link rel="stylesheet" href="/CSS/water/dark.min.css">
-  </head>
-  <style>
-    .add-link::after { content: attr(href); }
-  </style>
-  <body>
-    <ol>
-      <li><a class="add-link" href="https://hachyderm.io/@evntdrvn"></a></li>
-      <li><a class="add-link" href="https://cohost.org/evntdrvn"></a></li>
-      <li><a class="add-link" href="https://twitter.com/evntdrvn"></a></li>
-</ol>
-  </body>
+</head>
+<script>
+  // remove the scheme from link anchor text.
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.link');
+    links.forEach((link) => {
+      url = new URL(link.getAttribute("href"));
+      link.innerHTML = url.host + url.pathname;
+    })
+  });
+</script>
+
+<body>
+  <ul>
+    <li><a class="link" href="https://hachyderm.io/@evntdrvn">Mastodon</a></li>
+    <li><a class="link" href="https://cohost.org/evntdrvn">Cohost</a></li>
+    <li><a class="link" href="https://twitter.com/evntdrvn">Twitter</a></li>
+  </ul>
+</body>
+
 </html>
