@@ -7,30 +7,31 @@
   <meta name="description" content="Links to all my social media profiles.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/CSS/water/dark.min.css">
-  <style>
-    li::marker {
-      content: '> ';
-    }
-  </style>
+  <link rel="stylesheet" href="/CSS/custom.css">
+  <script>
+    // remove the scheme from link anchor text.
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.link');
+      links.forEach((link) => {
+        url = new URL(link.getAttribute("href"));
+        link.innerHTML = url.host + url.pathname;
+      })
+    });
+  </script>
 </head>
-<script>
-  // remove the scheme from link anchor text.
-  document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll('.link');
-    links.forEach((link) => {
-      url = new URL(link.getAttribute("href"));
-      link.innerHTML = url.host + url.pathname;
-    })
-  });
-</script>
+
 
 <body>
-  <hi>My social media profiles
-    <ul>
-      <li><a class="link" href="https://hachyderm.io/@evntdrvn">Mastodon</a></li>
-      <li><a class="link" href="https://cohost.org/evntdrvn">Cohost</a></li>
-      <li><a class="link" href="https://twitter.com/evntdrvn">Twitter</a></li>
-    </ul>
+  <header class="banner-text">
+    <a href="/">EVNTDRVN</a>
+    <hr>
+  </header>
+  <h1>My social media profiles</h1>
+  <ul>
+    <li><a class="link" href="https://hachyderm.io/@evntdrvn">Mastodon</a></li>
+    <li><a class="link" href="https://cohost.org/evntdrvn">Cohost</a></li>
+    <li><a class="link" href="https://twitter.com/evntdrvn">Twitter</a></li>
+  </ul>
 </body>
 
 </html>
