@@ -1,9 +1,9 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
   "name": "evntdrvn",
-  "compatibility_date": "2025-08-23",
+  "compatibility_date": "2026-01-01",
   "assets": {
-    "directory": "."
+    "directory": "./public"
   },
   "observability": {
     "enabled": true
