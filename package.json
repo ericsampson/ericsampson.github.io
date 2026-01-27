@@ -4,6 +4,9 @@
   "devDependencies": {
     "wrangler": "^4"
   },
+    "engines": {
+    "bun": ">=1.2.0"
+  },
   "scripts": {
   "deploy": "wrangler deploy --minify"
 }
