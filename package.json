@@ -1,0 +1,10 @@
+{
+  "name": "evntdrvn",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^4"
+  },
+  "scripts": {
+  "deploy": "wrangler deploy --minify"
+}
+}
